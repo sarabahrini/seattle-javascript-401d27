@@ -30,10 +30,10 @@ exports.subtract = (numA, numB) => {
 };
 
 //alternative. better way for above code, from 401 session 2 Oct 16th code review:
-module.exports = {
-  add: (a, b) => a + b,
-  sub: (a, b) => a - b,
-};
+// module.exports = {
+//   add: (a, b) => a + b,
+//   sub: (a, b) => a - b,
+// };
 
 
 
