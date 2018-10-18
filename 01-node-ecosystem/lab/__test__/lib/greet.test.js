@@ -12,12 +12,7 @@ describe('Testing the hello module', () => {
   it('should return null if the function is invoked with empty parameter', () => {
     expect(hello()).toBe(null);
   });
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 2cd98ae5f91ee66be11466b2116a46ff51b232f1
-});
 
 // // another way to do the same thing I done above is:
 // const greet = require('../../lib/greet.js');
@@ -27,12 +22,4 @@ describe('Testing the hello module', () => {
 //   })
 // })
 
-<<<<<<< HEAD
-=======
-});
->>>>>>> lab 01 is done
-=======
 
-});
-
->>>>>>> 2cd98ae5f91ee66be11466b2116a46ff51b232f1
