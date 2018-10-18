@@ -13,7 +13,6 @@ describe('Testing the hello module', () => {
     expect(hello()).toBe(null);
   });
 
-
 // // another way to do the same thing I done above is:
 // const greet = require('../../lib/greet.js');
 // describe('greet module',() => {
@@ -21,5 +20,3 @@ describe('Testing the hello module', () => {
 //     //I should complete this with watching the class 401 Oct16th record (video)
 //   })
 // })
-
-
