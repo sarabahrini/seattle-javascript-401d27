@@ -12,6 +12,7 @@ describe('Testing the hello module', () => {
   it('should return null if the function is invoked with empty parameter', () => {
     expect(hello()).toBe(null);
   });
+
 });
 
 // // another way to do the same thing I done above is:
@@ -21,4 +22,7 @@ describe('Testing the hello module', () => {
 //     //I should complete this with watching the class 401 Oct16th record (video)
 //   })
 // })
+
+
+});
 
