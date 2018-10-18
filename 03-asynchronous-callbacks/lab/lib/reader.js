@@ -39,11 +39,6 @@ module.exports = (path1, fileReadComplete) => {
 
 
 
-
-
-
-
-
 //Stretch - write the file reader function recursively so that it will be able to support 0 or more paths
 
 // module.exports = (path1, fileReadComplete) => {
@@ -84,3 +79,7 @@ module.exports = (path1, fileReadComplete) => {
 // };
 
 // fs.readFile(file1);
+
+
+
+////////
