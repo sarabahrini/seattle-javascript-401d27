@@ -7,8 +7,8 @@ let path1 = `${__dirname}/../data/eenie.txt`;
 let path2 = `${__dirname}/../data/meenie.txt`;
 let path3 = `${__dirname}/../data/moe.txt`;
 
-// creating an array of the files
-// let pathArray = [path1, path2, path3];
+ //creating an array of the files
+ //let pathArray = [path1, path2, path3];
 
 // Asynchronously reading a file.
 
