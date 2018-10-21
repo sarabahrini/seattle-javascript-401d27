@@ -21,6 +21,7 @@ module.exports = (path1, fileReadComplete) => {
   
   fileReadComplete(null, data.toString());
   };
+  
   fs.readFilePath(path1, fileDataFetched);
   return undefined;
 };
