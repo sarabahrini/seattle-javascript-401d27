@@ -55,7 +55,6 @@ describe('Test to verify if the methods function', () => {
     expect(actual).toBe(expected);
   });
 
-
   it('Should should return true if the LinkedList INCLUDEs a node with the same inserted value(5)', () => {
 
     let list = new LinkedList();
@@ -97,8 +96,6 @@ describe('Test to verify if the methods function', () => {
     expect(actual).toBe(expected);
   });
 
-
-
   it('Should print the Node values in the LinkedList', () => {
 
     let list = new LinkedList();
@@ -114,7 +111,6 @@ describe('Test to verify if the methods function', () => {
     expect(actual).toBe(expected);
   });
 
-
   it('Should print the Node values in the LinkedList', () => {
 
     let list = new LinkedList();
@@ -126,5 +122,25 @@ describe('Test to verify if the methods function', () => {
     expect(actual).toBe(expected);
   });
 
+});
 
+describe('Test to verify if the append method functions', () => {
+it('Should append the new node to the last node.', () => {
+
+  let list = new LinkedList ();
+
+  let actual = list.append(6);
+  console.log(actual, "NUMBER");
+  console.log(list, 'HERE');
+  let expected = 6;
+  expect(actual.head.value).toEqual(expected);
+
+  // list.append(7);
+
+});
+
+});
+
+describe('Test to verify if the INSERT (node not necessarily head) method functions', () => {
+it('Should append the new node to the last node.', () => {});
 });

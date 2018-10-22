@@ -18,7 +18,7 @@ class LinkedList {
     //   this.head = newNode;
     // } else {
     let newNode = new Node(value, this.head);
-    if(newNode.value === null){
+    if (newNode.value === null) {
       return undefined;
     }
     this.head = newNode;
@@ -26,6 +26,26 @@ class LinkedList {
     // this.head = new Node(value,this.head);
     return this;
   }
+
+  append(value) {
+    let newNode = new Node(value);
+    let currentNode = this.head;
+
+    if (this.head === null){
+      this.head = newNode;
+      return this;
+    } 
+
+    while (currentNode.next !== null) {
+    
+      currentNode = currentNode.next
+    }
+    currentNode.next = newNode;
+   return this;
+  }
+
+
+
   include(value) {
     //returns boolean result depending on whether there is a node with that value (argument)
     // let currentNode = this.head;
@@ -37,7 +57,7 @@ class LinkedList {
         this.head = this.head.next;
       }
     }
-    
+
     return false;
   }
 
