@@ -2,6 +2,18 @@
 
 const fs = require('fs');
 
+
+//connecting the reader.js to the library
+let path1 = `${__dirname}/../data/eenie.txt`;
+let path2 = `${__dirname}/../data/meenie.txt`;
+let path3 = `${__dirname}/../data/moe.txt`;
+
+ //creating an array of the files
+ //let pathArray = [path1, path2, path3];
+
+// Asynchronously reading a file.
+
+
 //export a single function
 module.exports = (pathArray, doneHandler) => {
 console.log(typeof pathArray);
