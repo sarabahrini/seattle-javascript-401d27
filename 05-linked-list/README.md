@@ -13,8 +13,12 @@ Lab-05
 ##Author
 Sara Bahrini
 
+<<<<<<< HEAD
 ![whiteboarding](https://raw.githubusercontent.com/sarabahrini/data-structures-and-algorithms/master/assets/Image%20from%20iOS%20(9).jpg)
 
 
 ![whiteboarding](https://raw.githubusercontent.com/sarabahrini/data-structures-and-algorithms/master/assets/Image%20from%20iOS%20(10).jpg)
 
+=======
+![whiteboarding](https://raw.githubusercontent.com/sarabahrini/seattle-javascript-401d27/master/05-linked-list/assets/Image%20from%20iOS%20(9).jpg)
+>>>>>>> 85368495b6402dd144ca4c843c1bb5df41787b0a
