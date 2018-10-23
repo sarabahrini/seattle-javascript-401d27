@@ -54,6 +54,24 @@ ee.on('@all', (client, message) => {
   });
 });
 
+ee.on('@nickname', (client, string) => {
+  let nickname = string.split(' ').shift().trim();
+  client.nickname = nickname;
+  client.socket.write(`Your nickname has been changed to ${nickname}\n`);
+});
+
+ee.on('@quit', (client) => {
+  pool.forEach(user => {
+    user.socket.write(`${client.nickname} has left the chatroom\n`);
+  });
+  pool = pool.filter(user => user !== client);
+  client.socket.end();
+});
+
+ee.on('@list', (client) => {
+  let list = pool.map(user => user.nickname).join('\n');
+  client.socket.write(`Here is a list of everyone in the chatroom:\n${list}\n`);
+});
 
 ee.on('@nickname', (client, string) => {
   let nickname = string.split(' ').shift().trim();
