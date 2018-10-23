@@ -124,23 +124,34 @@ describe('Test to verify if the methods function', () => {
 
 });
 
-describe('Test to verify if the append method functions', () => {
-it('Should append the new node to the last node.', () => {
+describe('Test to verify if the Append method functions', () => {
+it('Should APPEND the new node when list is empty.', () => {
 
   let list = new LinkedList ();
 
   let actual = list.append(6);
-  console.log(actual, "NUMBER");
-  console.log(list, 'HERE');
+  console.log(actual, "VALUE");
+  console.log(list, 'LIST');
   let expected = 6;
   expect(actual.head.value).toEqual(expected);
 
-  // list.append(7);
 
+  
+});
+it('Should APPEND new node to the last node.', () => {
+
+let list = new LinkedList ();
+list.insert(6);
+list.append(7);
+
+console.log(list, "LIST");
+let actual = list.print();
+let expected ='6,7';
+expect(actual).toBe(expected);
+});
 });
 
-});
-
-describe('Test to verify if the INSERT (node not necessarily head) method functions', () => {
-it('Should append the new node to the last node.', () => {});
-});
+// describe('Test to verify if the INSERT node before/ after targeted node, method functions', () => {
+// it('Should INSERT the new node BEFORE targeted node (5)', () => {});
+// it('Should INSERT the new node AFTER targeted node (5)', () => {});
+// });

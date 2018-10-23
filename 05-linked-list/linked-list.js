@@ -27,24 +27,22 @@ class LinkedList {
     return this;
   }
 
+
   append(value) {
+
     let newNode = new Node(value);
     let currentNode = this.head;
 
-    if (this.head === null){
+    if (this.head === null) {
       this.head = newNode;
       return this;
-    } 
-
+    }
     while (currentNode.next !== null) {
-    
       currentNode = currentNode.next
     }
     currentNode.next = newNode;
-   return this;
+    return this;
   }
-
-
 
   include(value) {
     //returns boolean result depending on whether there is a node with that value (argument)
@@ -70,6 +68,38 @@ class LinkedList {
       currentNode = currentNode.next;
     }
     return listArray.join(',');
+  }
+
+  insertBefore(targetNode, value) {
+    let newNode = new Node(value, this.head);
+    let currentNode = this.head;
+    while (include(targetNode.value) == false) {
+      if (currentNode.value === targetNode) {
+        insert(value);
+      } else if (currentNode.next !== targetedNode) {
+        currentNode = currentNode.next;
+        insert(value)
+      }
+    }
+    return undefined;
+
+  }
+
+  insertAfter(targetNode, value) {
+    let newNode = new Node(value, this.head);
+    let currentNode = this.head;
+    while (include(targetNode.value) == false) {
+      if (currentNode.next === null) {
+        this.append(targetNode);
+       } else if(currentNode.next.value === targetNode){
+         currentNode = currentNode.next.next;
+         insert(value)
+       }
+       
+
+    }
+    return undefined;
+
   }
 };
 
