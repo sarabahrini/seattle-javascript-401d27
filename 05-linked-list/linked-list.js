@@ -113,7 +113,7 @@ offsetFromEnd(k){
   
   let leaderNode =this.head;
   let followerCount = -k;
-  let followerNode;
+  let followerNode= null;
   if (followerCount === 0) {
     followerNode = this.head;
   }
@@ -127,7 +127,7 @@ offsetFromEnd(k){
     }
     leaderNode = leaderNode.next;
     }
-  return followerNode.value;
+  return followerNode && followerNode.value;
 }
 
 };
