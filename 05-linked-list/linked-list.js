@@ -89,17 +89,21 @@ class LinkedList {
   }
 
   insertAfter(targetNode, value) {
-    let newNode = new Node(value, this.head);
     let currentNode = this.head;
-    while (include(targetNode.value) == false) {
-      if (currentNode.next === null) {
-        this.append(targetNode);
-      } else if (currentNode.next.value === targetNode) {
-        currentNode = currentNode.next.next;
-        insert(value)
+    let newNode = new Node(value);
+
+    while (include(targetNode) == false) {
+
+      if (currentNode.value === targetNode) {
+        currentNode.next = targetNode;
+
+      } else {
+        
+        currentNode = currentNode.next
+        if (currentNode.value === targetNode) {
+          newNode.next = currentNode
+        }
       }
-
-
     }
     return undefined;
 
