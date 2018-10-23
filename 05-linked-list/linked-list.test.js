@@ -149,9 +149,30 @@ let actual = list.print();
 let expected ='6,7';
 expect(actual).toBe(expected);
 });
-});
-
 // describe('Test to verify if the INSERT node before/ after targeted node, method functions', () => {
 // it('Should INSERT the new node BEFORE targeted node (5)', () => {});
 // it('Should INSERT the new node AFTER targeted node (5)', () => {});
-// });
+});
+
+describe('Test to verify if the offsetFromEnd method functions', () => {
+  it('Should return the value of the node k offsetFromEnd of the LinkedList ', () => {
+  
+    let list = new LinkedList ();
+  
+    list.insert('d');
+    list.insert('c');
+    list.insert('b');
+    list.insert('a');
+    
+
+    let actual = list.offsetFromEnd(1);
+    console.log(actual, "VALUE");
+    console.log(list, 'LIST');
+    let expected = 'c';
+    expect(actual).toBe(expected);
+  
+  
+    
+  });
+
+});

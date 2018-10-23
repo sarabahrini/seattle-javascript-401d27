@@ -108,6 +108,28 @@ class LinkedList {
     return undefined;
 
   }
+
+offsetFromEnd(k){
+  
+  let leaderNode =this.head;
+  let followerCount = -k;
+  let followerNode;
+  if (followerCount === 0) {
+    followerNode = this.head;
+  }
+  while(leaderNode.next !== null){
+    followerCount++;
+    if(followerCount === 0){
+      followerNode = this.head;
+
+    } else if(followerCount > 0){
+      followerNode = followerNode.next;
+    }
+    leaderNode = leaderNode.next;
+    }
+  return followerNode.value;
+}
+
 };
 
 module.exports = {
