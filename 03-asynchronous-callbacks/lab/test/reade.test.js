@@ -39,7 +39,6 @@ describe('Test the reader for error', () => {
         // throw console.log(err);
       // }
 
-
       expect(err).not.toBeNull();
       done();
 

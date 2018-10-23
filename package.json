@@ -7,8 +7,10 @@
   "scripts": {
     "test": "jest --verbose --watchAll",
     "lint":"eslint **/,js"
+  },
 
-  "dependencies": {},
+  "dependencies": {}, 
+
   "devDependencies": {
     "eslint": "^5.7.0",
     "jest": "^23.6.0"
@@ -36,4 +38,6 @@
     "eslint": "^5.7.0",
     "jest": "^23.6.0"
   }
+}
+
 
