@@ -75,7 +75,7 @@ const requestHandler = (req, res) => {
 
 
       }
-    })
+    });
     .catch(err => {
       let errObj = { error: err };
       console.error(err);
