@@ -18,4 +18,6 @@ Sara Bahrini
 
 ![whiteboarding](https://raw.githubusercontent.com/sarabahrini/data-structures-and-algorithms/master/assets/Image%20from%20iOS%20(10).jpg)
 
+![whiteboarding](/Users/Sara.Bahrini/codefellows/401/assignment/my-seattle-javascript-401d27/05-linked-list/assets/20181024_145455.jpg)
+
 

@@ -11,6 +11,7 @@ class LinkedList {
   constructor(node = null) {
     this.head = node;
   }
+
   //makes a new node with that value
   insert(value) {
     // if(this.head === null){
@@ -26,7 +27,6 @@ class LinkedList {
     // this.head = new Node(value,this.head);
     return this;
   }
-
 
   append(value) {
 
