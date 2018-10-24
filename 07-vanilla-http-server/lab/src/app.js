@@ -55,9 +55,24 @@ const requestHandler = (req, res) => {
         res.end();
         return;
       }
-      else if (req.method === 'POST' && req.parsed.pathname === '/api.cowsay') {
+
+      else if ( req.method === 'POST' && req.parsed.pathname === '/data' ) {
+        res.setHeader('Content-Type', 'text/json');
+        res.statusCode = 200;
+        res.statusMessage = 'OK';
+        res.write( JSON.stringify(req.body) );
+        res.end();
+        return;
+      }
+
+
+      else if (req.method === 'POST' && req.parsed.pathname === '/api/cowsay') {
         console.log('HEAR IS THE POST');
         
+        // This line does the same thing that the line below does when you know what you exactly are sending let cowSaid = cowsay.say(req.body); 
+        let cowSaid = cowsay.say({text:req.body.tex});
+        res.send({content: cowSaid});
+
         res.statusCode = 200;
         res.statusMessage = 'OK';
         res.write(JSON.stringify(req.body));
