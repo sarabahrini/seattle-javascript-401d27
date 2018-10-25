@@ -12,6 +12,10 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^5.0.1",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "eslint": "^5.7.0",
     "jest": "^22.4.4"
   }
 }
