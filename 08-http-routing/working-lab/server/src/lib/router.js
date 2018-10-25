@@ -26,6 +26,7 @@ router.route = (req,res) => {
 
   return parser(req)
     .then(req => {
+      console.log(router.routes);
    
       let handler = router.routes[req.method][req.parsed.pathname];
       // If we have one, run the function contained within
@@ -33,7 +34,6 @@ router.route = (req,res) => {
         return handler(req,res);
       }
     })
-    
     .catch(err => {
       console.error('NOT_FOUND', req.parsed.pathname);
       res.status = 404;
