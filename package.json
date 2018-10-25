@@ -3,41 +3,27 @@
   "version": "1.0.0",
   "description": "![cf](http://i.imgur.com/7v5ASc8.png) Code Fellows Seattle, Javascript 401d27 ===================================== > Advanced Software Development",
   "main": "index.js",
-
-  "scripts": {
-    "test": "jest --verbose --watchAll",
-    "lint":"eslint **/,js"
-  },
-
-  "dependencies": {}, 
-
-  "devDependencies": {
-    "eslint": "^5.7.0",
-    "jest": "^23.6.0"
-  },
   "scripts": {
     "test": "jest --verbose --watchAll",
     "lint": "eslint **/.js"
-
+  },
+  "dependencies": {
+    "dotenv": "^6.1.0",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "eslint": "^5.7.0",
+    "jest": "^23.6.0"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sarabahrini/seattle-javascript-401d27.git"
   },
-
   "keywords": [],
-
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/sarabahrini/seattle-javascript-401d27/issues"
   },
-
-  "homepage": "https://github.com/sarabahrini/seattle-javascript-401d27#readme",
-  "devDependencies": {
-    "eslint": "^5.7.0",
-    "jest": "^23.6.0"
-  }
+  "homepage": "https://github.com/sarabahrini/seattle-javascript-401d27#readme"
 }
-
-
