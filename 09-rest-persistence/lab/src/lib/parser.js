@@ -8,9 +8,9 @@ module.exports = (req) => {
 
   return new Promise( (resolve,reject) => {
 
-    if( !(req || req.url) ) { reject('Invalid Request Object. Cannot Parse'); }
+    if( !(req && req.url) ) { reject('Invalid Request Object. Cannot Parse'); }
 
-    
+    //add a parsed property that has an object like {pathname:'', query:''}
     req.parsed = url.parse(req.url);
   
 
