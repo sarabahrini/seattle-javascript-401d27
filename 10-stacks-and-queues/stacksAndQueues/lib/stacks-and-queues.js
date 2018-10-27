@@ -16,18 +16,34 @@ class Stack{
 
 
   push(value){ 
-    return this.storage.push(value);
+
+    if(value){
+    this.storage.push(value);
+    this.top = value;
+    return this;
+    } else { return undefined; }
   
   }
     
   pop(){ 
-    return this.storage.pop(value);
-  }
+console.log(this)
+    if(this.storage.length > 1 ){    
+      this.top = this.storage[this.storage.length-2];
+      return this.storage.pop();
+    } else if(this.storage.length === 1 ){
+      this.top = null;
+      return this.storage.pop();
+
+  } else { return "array is empty" }
+
+}
 
   peek(){ 
-    return this.storage[this.storage.length -1];
-    
-    
+    if(this.storage.length === 0){
+      return null;
+    } else { return this.top}
+
+
   }
   
 };
@@ -52,5 +68,8 @@ class Queue{
     
   }
 
-
+};
+module.exports = {
+  Stack: Stack,
+  // Node: Node,
 };
