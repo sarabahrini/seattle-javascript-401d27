@@ -14,7 +14,6 @@ class Stack{
     this.top = null;
   };
 
-
   push(value){ 
 
     if(value){
@@ -26,7 +25,6 @@ class Stack{
   }
     
   pop(){ 
-console.log(this)
     if(this.storage.length > 1 ){    
       this.top = this.storage[this.storage.length-2];
       return this.storage.pop();
@@ -43,7 +41,6 @@ console.log(this)
       return null;
     } else { return this.top}
 
-
   }
   
 };
@@ -53,23 +50,38 @@ class Queue{
   constructor(){
     this.storage = [];
     this.front = null;
+    this.rear = null;
+    
   };
 
   enqueue(value){ 
-    return this.storage.unshift(value);
+
+    this.storage.unshift(value);
+    this.rear = this.storage[0];
+      return this;
+      
   }
     
   dequeue(){ 
-    return this.storage.pop(value);
-  }
+
+    if(this.storage){
+    this.front = this.storage[this.storage.length-2]
+    return this.storage.pop();
+  } return "value undefined";
+
+}
 
   peek(){ 
-    return this.storage[this.storage.length -1];
-    
+this.front = this.storage[this.storage.length-1]
+    if(this.storage.length <= 0){
+      return null;
+    } else { return this.front; }
   }
-
 };
+
 module.exports = {
   Stack: Stack,
   // Node: Node,
+  Queue: Queue
 };
+
