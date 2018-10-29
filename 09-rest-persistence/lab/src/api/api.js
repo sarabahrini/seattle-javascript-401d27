@@ -3,11 +3,7 @@
 const router = require('../lib/router.js');
 const Notes = require('../models/notes.js');
 
-/**
- * Simple method to send a JSON response (all of the API methods will use this)
- * @param res
- * @param data
- */
+
 let sendJSON = (res,data) => {
   res.statusCode = 200;
   res.statusMessage = 'OK';
