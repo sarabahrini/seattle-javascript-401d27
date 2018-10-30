@@ -23,6 +23,7 @@ console.log(typeof pathArray);
 
   const readFile = (path, callback) => {
     fs.readFile(path, (err, data) => {
+      // throw new Error('THIS IS MY TEST');
       if (err) {
         console.log(err);
         callback(err);
