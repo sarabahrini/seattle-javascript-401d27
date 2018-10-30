@@ -50,12 +50,12 @@ describe('Test the reader for error', () => {
 
     let altPath = [path2, path3, path1];
 
-    getFiles(pathArray, (err, actual) => {
+    getFiles(altPath, (err, fileContents) => {
       // if (err) {
       //   throw console.log(err);
       // }
-
-      expect(err).toThrow();
+      expect (fileContents[0]).toBe('a little text');
+      // expect(err).toThrow();
       done();
       
 
