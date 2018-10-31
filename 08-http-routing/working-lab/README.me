@@ -1,0 +1,52 @@
+![cf](http://i.imgur.com/7v5ASc8.png) 08: HTTP Routing
+===
+
+## Overview
+This application is a server with POST, PUT, GET, and DELETE functionality
+
+## Getting Started
+- Clone this repository
+- Ensure node.js is installed
+    - If not, run the command `brew install node` in the terminal
+- Navigate to the `/08-http-routing directory/lab` directory and run the command `npm i` to install dependencies
+- Create a .env file in the root and set PORT to 3000 
+- In Terminal run the command `node index.js` to start the server
+  
+
+## Testing Instructions for Postman
+- Open up Postman
+    - Postman can be downloaded at [https://www.getpostman.com/](https://www.getpostman.com/)
+
+- To make a POST request:
+    - Click on the dropdown and change it to POST
+    - Type `localhost:3000/api/v1/notes` in the address bar
+    - Click on the Body tab and set it to raw
+    - In the body, type a message in JSON
+    - Click Send
+
+- To make a PUT request:
+    - Click on the dropdown and change it to PUT
+    - Type `localhost:3000/api/v1/notes?=<uuid>` in the address bar
+    - Click on the Body tab and set it to raw
+    - In the body, type a message in JSON
+    - Click Send
+
+- To make a GET request:
+    - Click on the dropdown and change it to GET
+    - Type `localhost:3000/api/v1/notes?=<uuid>` in the address bar
+    - Click Send
+    
+- To make a DELETE request:
+    - Click on the dropdown and change it to DELETE
+    - Type `localhost:3000/api/v1/notes?=<uuid>` in the address bar
+    - Click Send
+
+    ## Testing Instructions for multiple Terminal windows
+        - Have one window open and direct to the related folder
+        - Type nodemon then enter to run the server on the PORT
+        - Have another window open and for each POST, PUT, GET, and DELETE,
+          enter http :3000/api/v1/notes and look at the other window to see all at the same time
+          or for example type http get :3000/api/v1/notes and look at the other window and watch for the result.
+          You can follow the same for rest of the POST, PUT, and DELETE and instead type the paths that are noted 
+          in Postman instruction for each 
+
