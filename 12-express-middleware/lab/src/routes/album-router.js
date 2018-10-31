@@ -74,4 +74,16 @@ router.post('/api/v1/albums', (req,res) => {
     .catch(console.error);
 });
 
+/// new code for  lab12
+router.put('/api/v1/albums', (req,res) => {
+  console.log('MADE IT TO PUT ROUTER');
+  // console.log(req.query.id, 'ID');
+  console.log(req.query.title, 'TITLE');
+
+ Album.updateOne(req.query.id, req.query.title, req.query.location)
+    //replace the body with the new body
+  //save
+
+});
+
 export default router;

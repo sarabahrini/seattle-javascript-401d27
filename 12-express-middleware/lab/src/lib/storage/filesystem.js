@@ -88,4 +88,28 @@ storage.save = (data) => {
   });
 };
 
+
+//lab12
+storage.update = (id, title) => {
+  console.log('MADE IT TO STORAGE.UPDATE\n\n');
+  console.log(id, title);
+
+
+  return new Promise( (resolve,reject) => {
+    let file = `${dataDirectory}/${id}.json`;
+    fs.readFile(file, (err,data) => {
+      if ( data ) {
+        console.log(data);
+        let obj = JSON.parse(data.toString());
+
+        resolve('OK');
+      }
+      else { reject(`${id} not found`); }
+    });
+
+  });
+
+}
+
+
 export default storage;

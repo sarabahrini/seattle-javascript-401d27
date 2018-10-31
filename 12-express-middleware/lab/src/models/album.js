@@ -31,13 +31,17 @@ class Album{
     return storage.get(id);
   }
 
-  static updateOne(criteria) {
-    return storage.update(this);
+//lab 12
+  static updateOne(id, title, location) {
+    console.log('MADE IT TO STATIC UPDATE');
+    console.log(id);
+    return storage.update(id);
   }
 
   static deleteOne(id) {
     return storage.delete(id);
   }
+
 
 }
 
