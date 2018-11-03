@@ -1,4 +1,4 @@
-# 03: Asyncronus Callbacks
+# 03: Asynchronous Callbacks
 
 ## Travis Badge
 N/A
@@ -11,8 +11,8 @@ The file reader module should have the function signature (paths, callback) => u
 On failure, the file reader module should invoke the callback with an error callback(error)
 On success, the file reader module should invoke the callback with null as the first parameter and the result as the second parameter - callback(null, result)
 
-### reader() fucntion export
+### reader() function export
 * Airty of 2 - receives a path and a callback called doneReadingFiles
-* defines a callback called gotTheFile that receives err and filedate
+* defines a callback called gotTheFile that receives err and fileDate
 
 
