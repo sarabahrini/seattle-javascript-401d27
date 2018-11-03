@@ -13,7 +13,7 @@ let pathArray = [path1, path2, path3];
 
 describe('Test the reader for error', () => {
   
-  xit('Should return the array of files in the same order that they were passed in.', (done) => {
+  it('Should return the array of files in the same order that they were passed in.', (done) => {
     
 
     getFiles(pathArray, (err, actual) => {
@@ -23,14 +23,14 @@ describe('Test the reader for error', () => {
 
       // console.log(actual)
       const expected = pathArray;
-
+      console.log(actual);
       expect(actual).toEqual(expected);
       done();
     });
 
   });
 
-  xit('Should return false if the returned array is empty.', (done) => {
+  it('Should return false if the returned array is empty.', (done) => {
 
     let altPath = ['aadd'];
 
@@ -46,16 +46,16 @@ describe('Test the reader for error', () => {
 
   });
 
-  it('Should return Truthy if files are returned in the wrong order.', (done) => {
+  it('Should return 3 files', (done) => {
 
-    let altPath = [path2, path3, path1];
+    let altPath = [path1, path2, path3];
 
-    getFiles(altPath, (err, fileContents) => {
-      // if (err) {
-      //   throw console.log(err);
-      // }
-      expect (fileContents[0]).toBe('a little text');
-      // expect(err).toThrow();
+    getFiles(altPath, (err, actual) => {
+      if (err) {
+        throw console.log(err);
+      }
+    
+      expect(actual.length).toBe(altPath.length);
       done();
       
 

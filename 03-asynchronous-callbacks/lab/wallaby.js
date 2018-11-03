@@ -5,7 +5,7 @@ module.exports = function () {
     files: ['lib/**/*.js'],
 
 
-    tests: ['**/*.test.js'],
+    tests: ['test/**/*.test.js'],
 
     env: {
 

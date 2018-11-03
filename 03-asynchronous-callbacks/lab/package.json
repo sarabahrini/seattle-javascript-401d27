@@ -1,0 +1,20 @@
+{
+  "name": "lab",
+  "version": "1.0.0",
+  "description": "## Travis Badge N/A",
+  "main": "wallaby.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest __verbose"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^5.8.0",
+    "jest": "^23.6.0"
+  }
+}
