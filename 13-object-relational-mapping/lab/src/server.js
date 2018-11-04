@@ -4,7 +4,7 @@ import cors from 'cors';
 
 import errorHandler from './middleware/error.js';
 import notFound from './middleware/404.js';
-import apiRouter from './api/v1.js';
+import apiRouter from './api/router.js';
 
 const app = express();
 

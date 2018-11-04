@@ -8,10 +8,10 @@ const mongoose = require('mongoose');
 
 const options ={
   useNewUrlParser: true,
-  useCreatIndex:true,
-  useFindAndModify:false,
+  useCreatIndex: true,
+  useFindAndModify: false,
 };
 
-mongoose.connect(process.env.MONGODB_URL, options);
+mongoose.connect(process.env.MONGODB_URI, options);
 
-require('./server.js').start(process.env.PORT);
+require('./src/server.js').start(process.env.PORT);
