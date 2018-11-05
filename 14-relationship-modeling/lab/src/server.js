@@ -2,35 +2,40 @@
 import express from 'express';
 import cors from 'cors';
 
+
+import router from './api/serve.js';
 import errorHandler from './middleware/error.js';
 import notFound from './middleware/404.js';
-import apiRouter from './api/router.js';
+// import apiRouter from './api/router.js';
 
 const app = express();
 
 app.use(cors());
 
 app.use(express.json());
-app.use(express.urlencoded({extended:true}));
-
-app.use(apiRouter);
+app.use(router);
 
 app.use(notFound);
 app.use(errorHandler);
 
-let isRunning = false;
+let serverUp = false;
 
 module.exports = {
-  server: app,
+ app,
   start: (port) => {
-    if( !isRunning ) {
-      app.listen(port, () =>{
-        isRunning = true;
+    if( !serverUp ) {
+      serverUp = app.listen(port, (err) => {
+        if(err) { throw err; }
         console.log(`Server Up on ${port}`);
       });
     }
     else{
-      console.log('Serer is already running');
+      console.log('Server is already running');
     }
+  },
+  stop:() => {
+    serverUp.close( () => {
+      console.log('Server has been stopped');
+    });
   },
 };

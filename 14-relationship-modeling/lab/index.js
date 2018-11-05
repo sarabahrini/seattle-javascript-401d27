@@ -6,12 +6,13 @@ require('babel-register');
 
 const mongoose = require('mongoose');
 
-const options ={
-  useNewUrlParser: true,
-  useCreatIndex: true,
-  useFindAndModify: false,
-};
+// const options ={
+//   useNewUrlParser: true,
+//   useCreatIndex: true,
+//   useFindAndModify: false,
+// };
 
-mongoose.connect(process.env.MONGODB_URI, options);
+const mongoose = require('mongoose');
+mongoose.connect(process.env.MONGODB_URI);
 
 require('./src/server.js').start(process.env.PORT);
