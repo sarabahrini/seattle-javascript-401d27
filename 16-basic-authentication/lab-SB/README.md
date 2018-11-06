@@ -14,7 +14,7 @@ This application uses cryptographic hash and cypher algorithms, which allows to 
 
 
 ## Testing Instructions
-- Open up Postman
+<!-- - Open up Postman
     - Postman can be downloaded at [https://www.getpostman.com/](https://www.getpostman.com/)
 
 - To make a POST request:
@@ -41,4 +41,4 @@ This application uses cryptographic hash and cypher algorithms, which allows to 
     - Click on the Body tab and set it to raw
     - In the body, type a note in JSON with month and date
         - { "month": "[month]", "date": "[date]" }
-    - Click Send
+    - Click Send -->
