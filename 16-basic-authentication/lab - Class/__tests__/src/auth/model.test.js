@@ -16,6 +16,11 @@ function createUser(username = 'foo', email = 'foo@bar.com', password='foobar') 
 }
 
 describe('User Model', () => {
+
+  it('should pass', () => {
+    expect(true).toBe(true);
+  });
+
   it('should create', async () => {
     
     const user = await createUser();
