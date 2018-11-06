@@ -8,8 +8,7 @@
     "watch": "nodemon index.js",
     "test-watch": "jest --watchAll",
     "test": "jest",
-    "lint": "eslint **/*.js",
-    "debug": "nodemon --inspect index.js"
+    "lint": "eslint **/*.js"
   },
   "keywords": [],
   "author": "",
