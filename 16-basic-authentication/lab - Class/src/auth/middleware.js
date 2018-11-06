@@ -4,7 +4,14 @@ import User from './model.js';
 
 export default (req, res, next) => {
 
-  let authenticate = (auth) => {
+  let authenticate = async (auth) => {
+
+    const user = await User.authenticate(auth);
+    if (!user) {
+      getAuth();
+     } else {
+
+    }
     // Validate the user using the model's authenticate method
     User.authenticate(auth)
     // We will always get back a "user" from mongo ... although it might be real and it might be null
