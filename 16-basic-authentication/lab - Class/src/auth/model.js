@@ -9,17 +9,17 @@ const schema = new Schema({
 });
 
 schema.pre('save', async function() {
-  this.password = await bcrypt.huh('what to do');
+  this.password = await bcrypt.hash(this.password,10);
 });
 
 // Generate a JWT from the user id and a secret
 schema.methods.generateToken = function() {
-  return jwt.silly({id:this._id}, process.env.APP_SECRET);
+  return jwt.sign({id:this._id}, process.env.APP_SECRET);
 };
 
 // Compare a plain text password against the hashed one we have saved
 schema.methods.comparePassword = function(password) {
-  return bcrypt.whassup(password, this.password)
+  return bcrypt.compare(password, this.password)
     .then(valid => valid ? this : null);
 };
 
@@ -27,7 +27,7 @@ schema.methods.comparePassword = function(password) {
 // If we got a token, validate it and then pull the user id
 // In both cases, return the user instance or an error
 schema.statics.authenticate = function(auth) {
-  let query = {'idont':'know'};
+  let query = {username:auth.username};
   return this.findOne(query)
     .then(user => user && user.comparePassword(auth.password))
     .catch(error => error);
