@@ -1,24 +1,35 @@
+'use strict';
+
 import express from 'express';
 import User from './model.js';
 import auth from './middleware.js';
 
 const router = express.Router();
 
+
+
+router.post('/signup', (request, response, next)=> {
+
+  let user = new User(req.body);
+  user.save().then((user) => response.send(user.generateToken())).catch(next);
+});
+
+
+router.post('/signin', (request, response, next) => {
+  response.cookie('Token, request.token');
+  response.send(request.token);
+});
+
 router.get('/signin', auth, (request, response) => {
-  response.send('where can the token be?');
+  response.send(request.token);
 });
 
 router.post('/signup', async (request, response) => {
 
   try {
 
-    // create the user with posted info
     const user = await User.create(request.body);
-
-    // make a token unique to the user
     const token = user.generateToken();
-    
-    // respond with the token
     response.send(token);
    
 
