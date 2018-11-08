@@ -19,4 +19,4 @@ describe('Testing the hello module', () => {
 //   it('should say hello foo', ()=>{
 //     //I should complete this with watching the class 401 Oct16th record (video)
 //   })
-// })
+})
