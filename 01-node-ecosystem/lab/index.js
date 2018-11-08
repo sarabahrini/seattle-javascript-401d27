@@ -4,5 +4,5 @@ const arithmetic = require('./lib/arithmetic.js');
 
 
 console.log(greet('string'));
-console.log(arithmetic.add(1, 2));
-console.log(arithmetic.sub(3, 2));
+console.log(arithmetic.add(3, 2));
+console.log(arithmetic.subtract(2, 2));

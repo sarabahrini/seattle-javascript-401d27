@@ -1,6 +1,6 @@
 'use strict'
 
-module.exports = (str) => {
+module.exports = exports = (str) => {
 
     if (typeof str === 'string') {
         return "hello " + str;

@@ -1,7 +1,6 @@
 'use strict'
 
 
-// Use export to export the module as an object to index.js
 module.exports = exports = {};
 
 
