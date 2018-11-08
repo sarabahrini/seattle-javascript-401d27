@@ -33,20 +33,24 @@ export default (request, response, next) => {
 
   try {
     let auth = {};
+    
+    
     let authHeader = request.headers.authorization;
-
+    console.log(authHeader);
+    
     if(!authHeader) {
       return getAuth();
     }
-
+    
     if(authHeader.match(/basic/i)) {
-
+      
       let base64Header = authHeader.replace(/Basic\s+/i, ''); 
       let base64Buffer = Buffer.from(base64Header,'base64'); 
       let bufferString = base64Buffer.toString(); 
       let [username,password] = bufferString.split(':');  
       auth = {username,password};  
-
+      
+      console.log(auth);
      
       authenticate(auth);
     }
