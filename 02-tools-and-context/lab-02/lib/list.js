@@ -6,12 +6,8 @@ class List {
   }
 
   push(value) {
-    //add value to the back of the list
-    // assign to an index
     this[this.length] = value;
-    //modify the length
     this.length++;
-    //return the length
     return this.length;
   }
 
