@@ -11,6 +11,15 @@ class List {
     return this.length;
   }
 
+  pop() {
+    if (!this.length) throw new Error('The list is empty');
+    if ( arguments.length > 0 ) throw new Error('No value needed')
+
+    let item = this[this.length-1];
+    delete this[this.length-1];
+    this.length--;
+    return item;
+  }
 
   map(callback) {
     let newList = new List();
@@ -20,13 +29,6 @@ class List {
     return newList;
   }
 
-  pop() {
-    //remove last index in list 
-    delete this[this.length];
-    //modify the length of the list
-    this.length--;
-    return this.length;
-  }
 
 
   slice(start, end) {

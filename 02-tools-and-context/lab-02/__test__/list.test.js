@@ -66,48 +66,69 @@ describe('Testing the List module', () => {
     for (let i=0; i<=loadArray.length; i++){
       newList.push(loadArray[i]);
     }
-    return newList 
+    return newList;
   };
 
-describe('Testing the initial state of the instance', () => {
-  it('should have a length of zero', () => {});
-  it('should be an instance of the list class', () => {});
+xdescribe('Testing the initial state of the instance', () => {
+  it('should have a length of zero', () => {
+
+  });
+  xit('should be an instance of the list class', () => {});
 });
 
-describe('Testing the push method', () => {
-  it('should add a new element to the list ', () => {});
-  it('should increased by one for each pushed element into the list ', () => {});
-  it('should add a new element to the list', () => {});
+xdescribe('Testing the push method', () => {
+  xit('should add a new element to the list ', () => {});
+  xit('should increased by one for each pushed element into the list ', () => {});
+  xit('should add a new element to the list', () => {});
 });
 
 describe('Testing the pop method', () => {
-  it('should remove and return the last element from the list ', () => {});
-  it('should return the length of the list by one ', () => {});
-  it('should throw an error if an argument is passed in ', () => {});
-  it('should throw an error if the list is empty', () => {});
+  it('should remove and return the last element from the list', () => {
+    let newList = new List();
+    newList.push(1);
+    newList.push(2);
+    expect(newList.pop()).toBe(2);
+  });
+  it('should return the length of the list by one ', () => {
+    let newList = testingList();
+    newList.pop();
+    expect(newList.length).toBe(6);
+
+  });
+  it('should throw an error if an argument is passed in ', () => {
+    let newList = testingList();
+    // let actual = newList.pop(7);
+    expect(() => newList.pop(7)).toThrow();
+  });
+  it('should throw an error if the list is empty', () => {
+    let newList = new List();
+    let actual = newList.pop;
+    expect(actual).toThrow();
+    //below is the same as using actual in our code
+    // expect(() => newList.pop()).toThrow();
+  });
 });
 
-
-describe('Testing the map method', () => {
+xdescribe('Testing the map method', () => {
   it('should apply the callback function to each element in the list', () => {});
   it('should throw an error if a callback is omitted', () => {});
   it('should throw an error if the list is empty', () => {});
 });
 
-describe('Testing the filter method', () => {
+xdescribe('Testing the filter method', () => {
   it('should return a new array containing only the element that meet the condition', () => {});
   it('should throw an error if a callback is omitted', () => {});
   it('should throw an error if the list is empty', () => {});
 });
 
-describe('Testing the reduce method', () => {
+xdescribe('Testing the reduce method', () => {
   it('should return a single element that is returned after after the callback is invoked on each element', () => {});
   it('should throw an error if initial state is omitted', () => {});
   it('should throw an error if the callback is omitted', () => {});
   it('should throw an error if the list is empty', () => {});
  
 });
-describe('Testing the slice method', () => {
+xdescribe('Testing the slice method', () => {
   it('should return the subset of values', () => {});
   it('should utilize the length of the array as the end value if the end is omitted', () => {});
 });
