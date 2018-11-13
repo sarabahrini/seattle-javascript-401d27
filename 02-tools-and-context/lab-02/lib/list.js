@@ -72,6 +72,12 @@ reduce(callback, initial){
 };
 
 slice(start, end){
+  end = end || this.length;
+  let result = new List();
+  for (let i=start; i<end; i++){
+result.push(this[i]);
+  }
+return result;
 
 }
 //       //help from http://reactivex.io/learnrx/
