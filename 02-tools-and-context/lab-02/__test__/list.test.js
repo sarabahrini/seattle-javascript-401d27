@@ -103,10 +103,16 @@ xdescribe('Testing the filter method', () => {
   });
 
   xdescribe('Testing the reduce method', () => {
-    it('should return a single element that is returned after after the callback is invoked on each element', () => { });
-    it('should throw an error if initial state is omitted', () => { });
-    it('should throw an error if the callback is omitted', () => { });
-    it('should throw an error if the list is empty', () => { });
+   xit('should return a single element that is returned after after the callback is invoked on each element', () => {
+      let list = testingList();
+      let actual = list.reduce((accumulator, current) => { return accumulator +current},0);
+      let expected = loadArray.reduce((accumulator, current) => { return accumulator +current},0);
+      expect(actual).toBe(expected);
+     });
+
+    xit('should throw an error if initial state is omitted', () => { });
+    xit('should throw an error if the callback is omitted', () => { });
+    xit('should throw an error if the list is empty', () => { });
 
   });
   xdescribe('Testing the slice method', () => {
