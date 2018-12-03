@@ -1,13 +1,19 @@
 {
-  "name": "02-tools-and-context",
+  "name": "lab-02",
   "version": "1.0.0",
-  "description": "",
+  "description": "![cf](http://i.imgur.com/7v5ASc8.png) 02: Tools and Context =====================================",
   "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
   "scripts": {
-    "test": "jest --verbose",
-    "lint": "eslint **/.js"
+    "test": "jest --verbose --watchAll"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^5.9.0",
+    "jest": "^23.6.0"
+  }
 }

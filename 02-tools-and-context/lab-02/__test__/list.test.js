@@ -1,6 +1,6 @@
 'use strict';
 
-const List = require('../../lib/list.js');
+const List = require('../lib/list.js');
 
 describe('Testing the List class', () => {
   it('should have a length of zero', () => {
